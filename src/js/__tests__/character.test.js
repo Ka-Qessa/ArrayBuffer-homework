@@ -1,82 +1,45 @@
 import {
-  Bowman,
-  Character,
-  Daemon,
-  Magician,
-  Swordsman,
-  Undead,
-  Zombie
+  Character
 } from "../character";
 
 describe('Character', () => {
   describe('constructor', () => {
-    it('should create a character with valid name and type', () => {
-      const character = new Bowman('Johnson', 'Bowman');
-      expect(character.name).toBe('Johnson');
-      expect(character.type).toBe('Bowman');
+    it('should create a character with valid parameters', () => {
+      const character = new Character('Swordman', 1, 10, 5, 100);
+      character.levelUp();
+      expect(character.name).toBe('Swordman');
+      expect(character.level).toBe(2);
+      expect(character.attack).toBe(12);
+      expect(character.defence).toBe(6);
       expect(character.health).toBe(100);
-      expect(character.level).toBe(1);
-      expect(character.attack).toBe(25);
-      expect(character.defence).toBe(25);
     });
 
-    test('should throw an error if name length is less than 2 or more than 10 characters', () => {
-      expect(() => new Character('J', 'Bowman')).toThrow('Character name must be between 2 and 10 characters long');
-      expect(() => new Character('Johnson Doen', 'Bowman')).toThrow('Character name must be between 2 and 10 characters long');
+    test('should levelUp the defence', () => {
+      const character = new Character('Player')
+      character.health = 0;
+      expect(() => character.levelUp()).toThrowError(new Error('Cannot level up a dead character'));
+    });
+  })
+})
+
+describe('Character', () => {
+  describe('damage', () => {
+    test('should decrease the health of the character by the correct amount', () => {
+      const character = new Character('Alice', 1, 10, 5, 100);
+      character.damage(10);
+      expect(character.health).toBe(90.5);
     });
 
-    test('should throw an error if type is invalid', () => {
-      expect(() => new Character('John', 'Archer')).toThrow('Invalid character type');
+    test('should not decrease health below 0', () => {
+      const character = new Character('Bob', 1, 10, 5, 5);
+      character.damage(10);
+      expect(character.health).toBe(0);
     });
 
-    test('should check the class Magition', () => {
-      const character = new Magician('Player', 'Magician');
-      expect(character.name).toBe('Player');
-      expect(character.type).toBe('Magician');
-      expect(character.health).toBe(100);
-      expect(character.level).toBe(1);
-      expect(character.attack).toBe(10);
-      expect(character.defence).toBe(40);
-    });
-
-    test('should check the class Swordsman', () => {
-      const character = new Swordsman('Player', 'Swordsman');
-      expect(character.name).toBe('Player');
-      expect(character.type).toBe('Swordsman');
-      expect(character.health).toBe(100);
-      expect(character.level).toBe(1);
-      expect(character.attack).toBe(40);
-      expect(character.defence).toBe(10);
-    });
-
-    test('should check the class Daemon', () => {
-      const character = new Daemon('Player', 'Daemon');
-      expect(character.name).toBe('Player');
-      expect(character.type).toBe('Daemon');
-      expect(character.health).toBe(100);
-      expect(character.level).toBe(1);
-      expect(character.attack).toBe(10);
-      expect(character.defence).toBe(40);
-    });
-
-    test('should check the class Zombie', () => {
-      const character = new Zombie('Player', 'Zombie');
-      expect(character.name).toBe('Player');
-      expect(character.type).toBe('Zombie');
-      expect(character.health).toBe(100);
-      expect(character.level).toBe(1);
-      expect(character.attack).toBe(40);
-      expect(character.defence).toBe(10);
-    });
-
-    test('should check the class Undead', () => {
-      const character = new Undead('Player', 'Undead');
-      expect(character.name).toBe('Player');
-      expect(character.type).toBe('Undead');
-      expect(character.health).toBe(100);
-      expect(character.level).toBe(1);
-      expect(character.attack).toBe(25);
-      expect(character.defence).toBe(25);
+    test('should take into account character defence', () => {
+      const character = new Character('Charlie', 1, 10, 50, 100); 
+      character.damage(20);
+      expect(character.health).toBe(90);
     });
   });
-})
+});
