@@ -26,37 +26,37 @@ export class Character {
     }
 }
 
-class Bowman extends Character {
+export class Bowman extends Character {
     constructor(name) {
         super(name, "Bowman");
     }
 }
 
-class Swordsman extends Character {
+export class Swordsman extends Character {
     constructor(name) {
         super(name, "Swordsman");
     }
 }
 
-class Magician extends Character {
+export class Magician extends Character {
     constructor(name) {
         super(name, "Magician");
     }
 }
 
-class Daemon extends Character {
+export class Daemon extends Character {
     constructor(name) {
-        super(name, "Daeman");
+        super(name, "Daemon");
     }
 }
 
-class Undead extends Character {
+export class Undead extends Character {
     constructor(name) {
         super(name, "Undead");
     }
 }
 
-class Zombie extends Character {
+export class Zombie extends Character {
     constructor(name) {
         super(name, "Zombie");
     }
