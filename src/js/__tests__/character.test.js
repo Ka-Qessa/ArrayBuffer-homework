@@ -17,13 +17,11 @@ describe('Character', () => {
     test('should levelUp the defence', () => {
       const character = new Character('Player')
       character.health = 0;
-      expect(() => character.levelUp()).toThrowError(new Error('Cannot level up a dead character'));
+      expect(() => character.levelUp()).toThrow(new Error('Cannot level up a dead character'));
     });
   })
 })
 
-describe('Character', () => {
-  describe('damage', () => {
     test('should decrease the health of the character by the correct amount', () => {
       const character = new Character('Alice', 1, 10, 5, 100);
       character.damage(10);
@@ -41,5 +39,3 @@ describe('Character', () => {
       character.damage(20);
       expect(character.health).toBe(90);
     });
-  });
-});
