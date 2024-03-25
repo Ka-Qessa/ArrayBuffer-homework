@@ -34,7 +34,7 @@ import { personage } from "../sorting";
     expect(personage(obj, ['name', 'level'])).toEqual(result);
   });
 
-  test('sort personage', () => {
+  test('sorting personage', () => {
     const obj = {
       name: 'мечник',
       health: 10,
@@ -98,6 +98,6 @@ import { personage } from "../sorting";
         value: 'мечник'
       },
     ];
-    
+
     expect(personage(obj, )).toEqual(result);
   });
