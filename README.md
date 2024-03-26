@@ -1,3 +1,3 @@
-«Object, Reflection и Proxy»
+Destructuring
 
-[![Build status](https://ci.appveyor.com/api/projects/status/8ha23tec4dha60vo?svg=true)](https://ci.appveyor.com/project/Ka-Qessa/for-in-homework)
+[![Build status](https://ci.appveyor.com/api/projects/status/8ivh95a620haauul?svg=true)](https://ci.appveyor.com/project/Ka-Qessa/destructuring)
