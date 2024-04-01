@@ -1,6 +1,5 @@
 export class Validator {
     validateUsername(username) {
-      const regex = /^(?!.*[0-9]{4,})[a-zA-Z0-9_-]{3,}[a-zA-Z-]$/;
-      return regex.test(username);
+      return /^[a-z][-\w]+[a-z]$/i.test(username) && !/\d{4,}/.test(username);
     }
   }

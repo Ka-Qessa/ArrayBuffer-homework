@@ -23,3 +23,15 @@ import {
     const username = '123user4';
     expect(validator.validateUsername(username)).toBeFalsy;
   });
+  
+  test.each([
+    'user1234s',
+    '-user1s',
+    'user1k-',
+    '123user',
+    'user199',
+    '_user-one',
+    'user-number-one_',
+  ])('%s should be falsy', (str) => {
+    expect(validator.validateUsername(str)).toBeFalsy();
+  });
