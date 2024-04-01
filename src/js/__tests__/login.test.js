@@ -7,17 +7,17 @@ import { Validator } from "../login";
   
   test('contains more than 3 consecutive numbers', () => {
     const username = 'user1234s';
-    expect(Validator.validateUsername(username)).toBeFalsy;
+    expect(Validator.validateUsername(username)).toBeFalsy();
   });
   
   test('starts and ends with non-alphanumeric character', () => {
     const username = '-user12_';
-    expect(Validator.validateUsername(username)).toBeFalsy;
+    expect(Validator.validateUsername(username)).toBeFalsy();
   });
   
   test('starts and ends with a number', () => {
     const username = '123user4';
-    expect(Validator.validateUsername(username)).toBeFalsy;
+    expect(Validator.validateUsername(username)).toBeFalsy();
   });
   
   test.each([
