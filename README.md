@@ -1,1 +1,1 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/mfyxf6dufuttt36c?svg=true)](https://ci.appveyor.com/project/Ka-Qessa/nickname-homework)
+[![Build status](https://ci.appveyor.com/api/projects/status/9cs4fnf1p46wvpg3?svg=true)](https://ci.appveyor.com/project/Ka-Qessa/set-homework)
