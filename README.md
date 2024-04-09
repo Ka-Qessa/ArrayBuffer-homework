@@ -1,1 +1,1 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/g0iga41vwr0h9rn5?svg=true)](https://ci.appveyor.com/project/Ka-Qessa/map-homework)
+[![Build status](https://ci.appveyor.com/api/projects/status/6p03345mx1xiavye?svg=true)](https://ci.appveyor.com/project/Ka-Qessa/math-homework)
