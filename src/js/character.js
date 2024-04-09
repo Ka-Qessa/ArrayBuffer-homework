@@ -21,8 +21,6 @@ export class Character {
     }
   }
   
-  export class Magician extends Character { }
+  export class Magician extends Character {}
   
-  export class Daemon extends Character { }
-  
-  
+  export class Daemon extends Character {}
