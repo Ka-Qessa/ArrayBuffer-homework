@@ -1,1 +1,1 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/6p03345mx1xiavye?svg=true)](https://ci.appveyor.com/project/Ka-Qessa/math-homework)
+[![Build status](https://ci.appveyor.com/api/projects/status/ffc8mkbxucosx2fs?svg=true)](https://ci.appveyor.com/project/Ka-Qessa/arraybuffer-homework)
